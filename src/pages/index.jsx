@@ -1,9 +1,9 @@
 import React from "react";
 import Helmet from "react-helmet";
+import styled from "styled-components";
 import PostListing from "../components/PostListing/PostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
-import styled from "styled-components";
 
 const Container = styled.div`
   margin: 3rem auto;
@@ -84,7 +84,7 @@ class Index extends React.Component {
 
 export default Index;
 
-/* eslint no-undef: "off"*/
+/* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
