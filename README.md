@@ -2,6 +2,14 @@
 
 An application for track movies that you want to see or already saw.
 
+## Features
+  - Sign-in and Sign-up with Firebase
+  - Movies pages with description, comments and rate
+  - Interact with other users
+  - Edit / Delete movies from user account
+  - Filter movies by categories
+  - Tests with Jest and Enzyme
+
 ## Requirements
 
 - Install [Node.js](https://nodejs.org)
@@ -12,13 +20,11 @@ An application for track movies that you want to see or already saw.
 - ```npm install``` # or ```yarn install```
 - ```npm run develop``` # or ```gatsby develop```
 
-## Features
-  - Sign-in and Sign-up
-  - Movies pages with description, comments and rate
-  - Edit / Delete movies from user account=
-  - Filter movies by categories
-  - Tests with Jest and Enzyme
-  - A built-in server to track your movies and comments for navigation tests
+## Additional Resources
+- ReactJs
+- React Helmet
+- Prettier
+- Styled Components
 
 ## Credits
 
