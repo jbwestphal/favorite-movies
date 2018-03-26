@@ -4,7 +4,7 @@ import { PasswordForgetForm } from '../components/PasswordForget';
 
 const PasswordForgetPage = () =>
   <div>
-    <h1>PasswordForget</h1>
+    <h1>Forget Password</h1>
     <PasswordForgetForm />
   </div>
 

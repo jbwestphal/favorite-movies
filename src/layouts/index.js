@@ -10,10 +10,10 @@ import './index.css';
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Gatsby Firebase Authentication"
+      title="Favorite Movies"
       meta={[
-        { name: 'description', content: 'Gatsby Firebase Authentication' },
-        { name: 'keywords', content: 'Gatsby Firebase Authentication' },
+        { name: 'description', content: 'Track movies you want to watch and receive notifications about them!' },
+        { name: 'keywords', content: 'movies, follow movies, watch movies, see movies, news movies' },
       ]}
     />
     <div className="app">

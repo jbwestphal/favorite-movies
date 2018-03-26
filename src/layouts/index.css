@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,400i,500,600,700');
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 15px;
+  color: #424242;
+}
+
 .app {
   margin: 20px;
 }
