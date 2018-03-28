@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-import Navigation from '../components/Navigation';
+import Header from '../components/Header';
 import withAuthentication from '../components/Session/withAuthentication';
 
 import './index.css';
@@ -10,19 +10,16 @@ import './index.css';
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Favorite Movies"
+      title="Favorite Movies - Track movies to watch"
       meta={[
         { name: 'description', content: 'Track movies you want to watch and receive notifications about them!' },
         { name: 'keywords', content: 'movies, follow movies, watch movies, see movies, news movies' },
       ]}
     />
-    <div className="app">
-      <Navigation />
-
-      <hr/>
-
+    <main className="app">
+      <Header />
       {children()}
-    </div>
+    </main>
   </div>
 )
 
