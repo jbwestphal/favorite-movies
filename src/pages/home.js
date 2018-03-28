@@ -41,7 +41,7 @@ const UserList = ({ users }) =>
   <div>
     <h2>List of App User IDs (Saved on Sign Up in Firebase Database)</h2>
     {users.map(user =>
-      <div key={user.index}>{user.index}</div>
+      <div key={user.index}>Olá {user.username}</div>
     )}
   </div>
 
