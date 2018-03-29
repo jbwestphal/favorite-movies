@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 
 import Navigation from '../Navigation';
+import NavigationUser from '../NavigationUser';
 import Search from '../Search';
 import logo from './logo.png';
 
@@ -9,7 +10,7 @@ const Header = (props) =>
   <StyledHeader className="header">
     <h1 className="header-logo"><img src={logo} alt="Favorite Movies" /></h1>
     <Navigation />
-    <Search />
+    <NavigationUser />
   </StyledHeader>
 
 // Styles

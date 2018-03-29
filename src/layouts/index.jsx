@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
 import Header from '../components/Header';
+import Search from '../components/Search';
 import withAuthentication from '../components/Session/withAuthentication';
 
 import './index.css';
@@ -18,6 +19,7 @@ const TemplateWrapper = ({ children }) => (
     />
     <main className="app">
       <Header />
+      <Search />
       {children()}
     </main>
   </div>
