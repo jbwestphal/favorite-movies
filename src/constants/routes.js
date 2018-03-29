@@ -4,3 +4,6 @@ export const SIGN_IN = '/signin';
 export const PASSWORD_FORGET = '/forget-password';
 export const HOME = '/home';
 export const ACCOUNT = '/account';
+export const MOVIES = '/movies';
+export const FAQ = '/faq';
+export const CONTACT = '/contact';

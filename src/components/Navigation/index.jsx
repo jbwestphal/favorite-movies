@@ -1,19 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
-// import FontAwesome from 'react-fontawesome';
 import styled from "styled-components";
 
 import SignOutButton from '../SignOut';
 import * as routes from '../../constants/routes';
+import { red, green } from "../../utils/colors";
 
-const Navigation = (props, { authUser }) =>
+const Navigation = (props) =>
   <StyledNav>
     <NavList>
       <NavListItem><Link to={routes.LANDING}>Home</Link></NavListItem>
-      <NavListItem><Link to={routes.LANDING}>Movies</Link></NavListItem>
-      <NavListItem><Link to={routes.LANDING}>FAQ</Link></NavListItem>
-      <NavListItem><Link to={routes.LANDING}>Contact</Link></NavListItem>
+      <NavListItem><Link to={routes.MOVIES}>Movies</Link></NavListItem>
+      <NavListItem><Link to={routes.FAQ}>FAQ</Link></NavListItem>
+      <NavListItem><Link to={routes.CONTACT}>Contact</Link></NavListItem>
     </NavList>
   </StyledNav>
 
@@ -39,6 +39,30 @@ const NavList = styled.ul`
 
 const NavListItem = styled.li`
   margin: 0 25px;
+
+  & a {
+    padding-bottom: 6px;
+    position: relative;
+
+    &:before {
+      left: 50%;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      content: '';
+      position: absolute;
+      background: ${green};
+      transition: all ease-in-out 0.3s;
+      transform: translate(-50%,0);
+    }
+  }
+
+  &:hover {
+    color: #fff;
+    a:before {
+      width: 100%;
+    }
+  }
 `;
 
 export default Navigation;

@@ -33,7 +33,7 @@ const StyledSearch = styled.section`
     background: transparent;
     font-size: 18px;
     padding: 0 20px;
-    height: 37px;
+    height: 40px;
     width: 100%;
     max-width: 750px;
     color: #ccc;

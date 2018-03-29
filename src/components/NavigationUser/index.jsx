@@ -10,9 +10,9 @@ import * as routes from '../../constants/routes';
 
 const NavigationUser = (props, { authUser }) =>
   <nav>
-    { authUser
-        ? <NavigationAuth />
-        : <NavigationNonAuth />
+    {authUser
+      ? <NavigationAuth />
+      : <NavigationNonAuth />
     }
   </nav>
 
