@@ -4,6 +4,7 @@ import Link from 'gatsby-link';
 // import FontAwesome from 'react-fontawesome';
 import styled from "styled-components";
 
+import Button from '../Button';
 import SignOutButton from '../SignOut';
 import * as routes from '../../constants/routes';
 
@@ -15,10 +16,6 @@ const NavigationUser = (props, { authUser }) =>
     }
   </nav>
 
-NavigationUser.contextTypes = {
-  authUser: PropTypes.object,
-};
-
 const NavigationAuth = () =>
   <ul className="header-login header-logged">
     <li><Link to={routes.HOME}>My List</Link></li>
@@ -27,10 +24,24 @@ const NavigationAuth = () =>
   </ul>
 
 const NavigationNonAuth = () =>
-  <ul className="header-login header-unlogged">
-    <li className="header-nav-login"><Link className="btn btn-sm" to={routes.SIGN_IN}>Sign In</Link></li>
-    <li className="header-nav-register"><Link className="btn btn-sm" to={routes.SIGN_UP}>Register</Link></li>
-  </ul>
+  <NavUnlogged className="header-unlogged">
+    <li><Link className="btn btn-sm" to={routes.SIGN_IN}><Button>Sign In</Button></Link></li>
+    <li><Link className="btn btn-sm" to={routes.SIGN_UP}><Button>Register</Button></Link></li>
+  </NavUnlogged>
 
+NavigationUser.contextTypes = {
+  authUser: PropTypes.object,
+};
 
 export default NavigationUser;
+
+// Styles
+const NavUnlogged = styled.ul`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & li {
+    margin-left: 15px;
+  }
+`;

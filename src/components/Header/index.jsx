@@ -19,11 +19,11 @@ const StyledHeader = styled.header`
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 20px;
   position: fixed;
   letter-spacing: 1px;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 export default Header;

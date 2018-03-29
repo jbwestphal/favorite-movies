@@ -8,8 +8,8 @@ import SignOutButton from '../SignOut';
 import * as routes from '../../constants/routes';
 
 const Navigation = (props, { authUser }) =>
-  <StyledNav className="header-nav">
-    <NavList className="header-nav-list">
+  <StyledNav>
+    <NavList>
       <NavListItem><Link to={routes.LANDING}>Home</Link></NavListItem>
       <NavListItem><Link to={routes.LANDING}>Movies</Link></NavListItem>
       <NavListItem><Link to={routes.LANDING}>FAQ</Link></NavListItem>
