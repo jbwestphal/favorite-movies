@@ -1,9 +1,39 @@
 import React from 'react';
 
-const LandingPage = () =>
-  <div>
-    <h1>Landing</h1>
-    <p>The Landing Page is open to everyone, even though the user isn't signed in.</p>
-  </div>
+class LandingPage extends React.Component {
+
+  render() {
+    const { data } = this.props
+
+    return(
+      <section>
+        <ul>
+          {data.allMoviesJson.edges.map(({ node }) =>
+            <li key={node.id}>
+              <h4>{node.title}</h4>
+              <img src={node.cover} />
+              <p>{node.category}</p>
+            </li>
+          )}
+        </ul>
+      </section>
+    )
+  }
+}
 
 export default LandingPage;
+
+export const LandingQuery = graphql`
+  query LandingQuery {
+    allMoviesJson {
+      edges {
+        node {
+          id
+          category
+          cover
+          title
+        }
+      }
+    }
+  }
+`

@@ -8,12 +8,12 @@ import withAuthentication from '../components/Session/withAuthentication';
 
 import './index.css';
 
-const TemplateWrapper = ({ children }) => (
+const TemplateWrapper = ({ children, data }) => (
   <div>
     <Helmet
-      title="Favorite Movies - Track movies to watch"
+      title={data.site.siteMetadata.title}
       meta={[
-        { name: 'description', content: 'Track movies you want to watch and receive notifications about them!' },
+        { name: 'description', content: `Track movies you want to watch and receive notifications about them!` },
         { name: 'keywords', content: 'movies, follow movies, watch movies, see movies, news movies' },
       ]}
     />
@@ -30,3 +30,13 @@ TemplateWrapper.propTypes = {
 }
 
 export default withAuthentication(TemplateWrapper)
+
+export const query = graphql`
+  query LayoutQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`

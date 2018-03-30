@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 import { red, green } from "../../utils/colors";
 
-const Button = (props) =>
+const Button = ({ children }) =>
   <StyledButton>
-    <span>{props.children}</span>
+    <span>{children}</span>
   </StyledButton>
 
 export default Button;
