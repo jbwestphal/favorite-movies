@@ -18,6 +18,8 @@ export const Wrapper = styled.section`
   margin: 0 auto;
   position: relative;
   padding: 60px 20px;
+
+  ${mediaMin.phone`min-height: 600px;`}
 `;
 
 export const PageContainer = styled.div`

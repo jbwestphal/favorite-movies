@@ -6,6 +6,7 @@ import {
 
 import { auth, db } from '../../firebase';
 import * as routes from '../../constants/routes';
+import { StyledForm } from '../../utils/cssForm';
 
 const updateByPropertyName = (propertyName, value) => () => ({
   [propertyName]: value,
@@ -74,37 +75,43 @@ class SignUpForm extends Component {
       email === '';
 
     return (
-      <form onSubmit={this.onSubmit}>
-        <input
-          value={username}
-          onChange={event => this.setState(updateByPropertyName('username', event.target.value))}
-          type="text"
-          placeholder="Full Name"
-        />
-        <input
-          value={email}
-          onChange={event => this.setState(updateByPropertyName('email', event.target.value))}
-          type="text"
-          placeholder="Email Address"
-        />
-        <input
-          value={passwordOne}
-          onChange={event => this.setState(updateByPropertyName('passwordOne', event.target.value))}
-          type="password"
-          placeholder="Password"
-        />
-        <input
-          value={passwordTwo}
-          onChange={event => this.setState(updateByPropertyName('passwordTwo', event.target.value))}
-          type="password"
-          placeholder="Confirm Password"
-        />
-        <button disabled={isInvalid} type="submit">
-          Sign Up
-        </button>
+      <StyledForm>
+        <form onSubmit={this.onSubmit}>
+          <input
+            value={username}
+            onChange={event => this.setState(updateByPropertyName('username', event.target.value))}
+            type="text"
+            required
+            placeholder="Full Name"
+          />
+          <input
+            value={email}
+            onChange={event => this.setState(updateByPropertyName('email', event.target.value))}
+            type="text"
+            required
+            placeholder="Email"
+          />
+          <input
+            value={passwordOne}
+            onChange={event => this.setState(updateByPropertyName('passwordOne', event.target.value))}
+            type="password"
+            required
+            placeholder="Password"
+          />
+          <input
+            value={passwordTwo}
+            onChange={event => this.setState(updateByPropertyName('passwordTwo', event.target.value))}
+            type="password"
+            required
+            placeholder="Confirm Password"
+          />
+          <button disabled={isInvalid} type="submit">
+            Confirm
+          </button>
 
-        { error && <p>{error.message}</p> }
-      </form>
+          { error && <p>{error.message}</p> }
+        </form>
+      </StyledForm>
     );
   }
 }

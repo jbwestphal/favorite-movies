@@ -19,6 +19,7 @@ const StyledButton = styled.div`
   cursor: pointer;
   outline: none;
   margin: 0 auto;
+  border: none;
   font-weight: 600;
   background: ${red};
   display: inline-block;

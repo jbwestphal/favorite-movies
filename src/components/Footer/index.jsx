@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 
-import { red, green } from "../../utils/colors";
+import { redDark } from "../../utils/colors";
 
 const Footer = (props) =>
   <StyledFooter>
@@ -10,7 +10,7 @@ const Footer = (props) =>
 
 // Styles
 const StyledFooter = styled.footer`
-  border-top: 3px solid ${red};
+  border-top: 3px solid ${redDark};
   padding: 30px 20px;
   text-align: center;
   line-height: 1.6em;

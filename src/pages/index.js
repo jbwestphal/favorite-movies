@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import MovieItem from '../components/MovieItem';
 import { Wrapper } from "../utils/cssGrid";
+import { TitleSection } from "../utils/cssTypo";
 
 class LandingPage extends React.Component {
 
@@ -53,14 +54,6 @@ export const LandingQuery = graphql`
 `
 
 // Styles
-const TitleSection = styled.h2`
-  color: #fff;
-  text-transform: uppercase;
-  margin: 0 0 15px;
-  font-size: 16px;
-  font-weight: 600;
-`;
-
 const WrapperCatalog = styled.div`
   display: flex;
   align-items: stretch;

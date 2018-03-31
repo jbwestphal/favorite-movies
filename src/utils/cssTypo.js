@@ -10,3 +10,22 @@ export const TitlePage = styled.h2`
   font-weight: 600;
   border-bottom: 2px solid ${green};
 `;
+
+export const TitleSection = styled.h2`
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0 0 15px;
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+
+  &:after {
+    content: '';
+    width: 30px;
+    height: 2px;
+    background: ${green};
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
+  }
+`;
