@@ -1,0 +1,34 @@
+/* Hero Styles */
+
+.hero-title {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.hero--absolute,
+.hero--grid {
+    position: relative;
+}
+
+.hero--absolute .hero-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 0 20px 20px;
+}
+
+.hero--grid {
+    display: flex;
+}
+
+.hero--grid .hero-img {
+    margin-right: 30px;
+}
+
+.hero--grid .hero-title {
+    font-size: 30px;
+    margin: 0 0 20px;
+}

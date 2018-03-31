@@ -1,4 +1,7 @@
 import React from 'react';
+import styled from "styled-components";
+import MovieItem from '../components/MovieItem';
+// import { Col_30, Col_60 } from "../utils/cssGrid";
 
 class LandingPage extends React.Component {
 
@@ -6,8 +9,19 @@ class LandingPage extends React.Component {
     const { data } = this.props
 
     return(
-      <section>
-        <ul>
+      <Wrapper>
+
+        <TitleSection>Recent Added</TitleSection>
+        <WrapperCatalog>
+          <MovieItem />
+          <MovieItem />
+          <MovieItem />
+          <MovieItem />
+          <MovieItem />
+          <MovieItem />
+        </WrapperCatalog>
+
+        {/* <ul>
           {data.allMoviesJson.edges.map(({ node }) =>
             <li key={node.id}>
               <h4>{node.title}</h4>
@@ -15,8 +29,8 @@ class LandingPage extends React.Component {
               <p>{node.category}</p>
             </li>
           )}
-        </ul>
-      </section>
+        </ul> */}
+      </Wrapper>
     )
   }
 }
@@ -37,3 +51,35 @@ export const LandingQuery = graphql`
     }
   }
 `
+
+// Styles
+const Wrapper = styled.section`
+  width: 100%;
+  max-width: 1640px;
+  margin: 0 auto;
+  position: relative;
+  padding: 60px 20px;
+`;
+
+const TitleSection = styled.h2`
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0 0 15px;
+  font-size: 16px;
+  font-weight: 600;
+`;
+
+const WrapperCatalog = styled.div`
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+
+  & article {
+    width: 15%;
+    margin-right: 2%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+`;
