@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import MovieItem from '../components/MovieItem';
-// import { Col_30, Col_60 } from "../utils/cssGrid";
+import { Wrapper } from "../utils/cssGrid";
 
 class LandingPage extends React.Component {
 
@@ -53,14 +53,6 @@ export const LandingQuery = graphql`
 `
 
 // Styles
-const Wrapper = styled.section`
-  width: 100%;
-  max-width: 1640px;
-  margin: 0 auto;
-  position: relative;
-  padding: 60px 20px;
-`;
-
 const TitleSection = styled.h2`
   color: #fff;
   text-transform: uppercase;

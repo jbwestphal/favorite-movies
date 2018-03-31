@@ -1,6 +1,6 @@
 {
   "name": "favorite-movies",
-  "description": "Favorite Movies",
+  "description": "Favorite Movies - Track movies to watch later.",
   "version": "1.0.0",
   "author": "Jessica Westphal <contact@jessicawestphal.com>",
   "dependencies": {
@@ -14,10 +14,16 @@
     "nuka-carousel": "^4.0.3",
     "prop-types": "^15.6.0",
     "react-fontawesome": "^1.6.1",
-    "styled-components": "^3.2.3"
+    "styled-components": "^3.2.3",
+    "react": "^16.2.0",
+    "react-disqus-comments": "^1.1.1",
+    "react-dom": "^16.2.0",
+    "react-helmet": "^5.2.0",
+    "react-share": "^2.0.0",
+    "react-twitter-widgets": "^1.7.1"
   },
   "keywords": [
-    "gatsby"
+    "gatsby", "firebase", "react-helmet"
   ],
   "license": "MIT",
   "main": "n/a",
