@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { auth } from '../../firebase';
+import { StyledForm } from '../../utils/cssForm';
 
 const updateByPropertyName = (propertyName, value) => () => ({
   [propertyName]: value,
@@ -45,25 +46,27 @@ class PasswordChangeForm extends Component {
       passwordOne === '';
 
     return (
-      <form onSubmit={this.onSubmit}>
-        <input
-          value={passwordOne}
-          onChange={event => this.setState(updateByPropertyName('passwordOne', event.target.value))}
-          type="password"
-          placeholder="New Password"
-        />
-        <input
-          value={passwordTwo}
-          onChange={event => this.setState(updateByPropertyName('passwordTwo', event.target.value))}
-          type="password"
-          placeholder="Confirm New Password"
-        />
-        <button disabled={isInvalid} type="submit">
-          Reset My Password
-        </button>
+      <StyledForm>
+        <form onSubmit={this.onSubmit}>
+          <input
+            value={passwordOne}
+            onChange={event => this.setState(updateByPropertyName('passwordOne', event.target.value))}
+            type="password"
+            placeholder="New Password"
+          />
+          <input
+            value={passwordTwo}
+            onChange={event => this.setState(updateByPropertyName('passwordTwo', event.target.value))}
+            type="password"
+            placeholder="Confirm New Password"
+          />
+          <button disabled={isInvalid} type="submit">
+            Reset My Password
+          </button>
 
-        { error && <p>{error.message}</p> }
-      </form>
+          { error && <p>{error.message}</p> }
+        </form>
+      </StyledForm>
     );
   }
 }

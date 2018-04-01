@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { TitlePage } from "../utils/cssTypo";
+import { Wrapper, PageContainer } from "../utils/cssGrid";
 import withAuthorization from '../components/Session/withAuthorization';
 import { db } from '../firebase';
 
@@ -27,19 +29,19 @@ class HomePage extends Component {
     const { users } = this.state;
 
     return (
-      <div>
-        <h1>Home</h1>
-        <p>The Home Page is accessible by every signed in user.</p>
+      <Wrapper>
+        <PageContainer>
+          <TitlePage>My Movie List</TitlePage>
 
-        { !!users.length && <UserList users={users} /> }
-      </div>
+          { !!users.length && <UserList users={users} /> }
+        </PageContainer>
+      </Wrapper>
     );
   }
 }
 
 const UserList = ({ users }) =>
   <div>
-    <h2>List of App User IDs (Saved on Sign Up in Firebase Database)</h2>
     {users.map(user =>
       <div key={user.index}>Olá {user.username}</div>
     )}

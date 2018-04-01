@@ -1,11 +1,15 @@
 import React from 'react';
 
+import { TitlePage } from "../utils/cssTypo";
+import { Wrapper, PageContainer } from "../utils/cssGrid";
 import { PasswordForgetForm } from '../components/PasswordForget';
 
 const PasswordForgetPage = () =>
-  <div>
-    <h1>Forget Password</h1>
+  <Wrapper>
+    <PageContainer>
+    <TitlePage>Forget Password</TitlePage>
     <PasswordForgetForm />
-  </div>
+    </PageContainer>
+  </Wrapper>
 
 export default PasswordForgetPage;

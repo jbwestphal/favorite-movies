@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { auth } from '../../firebase';
 import * as routes from '../../constants/routes';
+import { StyledForm } from '../../utils/cssForm';
 
 const updateByPropertyName = (propertyName, value) => () => ({
   [propertyName]: value,
@@ -43,19 +44,21 @@ class PasswordForgetForm extends Component {
     const isInvalid = email === '';
 
     return (
-      <form onSubmit={this.onSubmit}>
-        <input
-          value={this.state.email}
-          onChange={event => this.setState(updateByPropertyName('email', event.target.value))}
-          type="text"
-          placeholder="Email Address"
-        />
-        <button disabled={isInvalid} type="submit">
-          Reset My Password
-        </button>
+      <StyledForm>
+        <form onSubmit={this.onSubmit}>
+          <input
+            value={this.state.email}
+            onChange={event => this.setState(updateByPropertyName('email', event.target.value))}
+            type="text"
+            placeholder="Insert your email"
+          />
+          <button disabled={isInvalid} type="submit">
+            Reset My Password
+          </button>
 
-        { error && <p>{error.message}</p> }
-      </form>
+          { error && <p>{error.message}</p> }
+        </form>
+      </StyledForm>
     );
   }
 }
