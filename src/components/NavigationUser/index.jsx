@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
-// import FontAwesome from 'react-fontawesome';
+import FontAwesome from 'react-fontawesome';
 import styled from "styled-components";
 
 import Button from '../Button';
 import SignOutButton from '../SignOut';
 import * as routes from '../../constants/routes';
+import Dropdown from '../Dropdown';
 
 const NavigationUser = (props, { authUser }) =>
   <nav>
@@ -16,12 +17,26 @@ const NavigationUser = (props, { authUser }) =>
     }
   </nav>
 
+const items = [
+  {
+    id: 1,
+    element: () => <Link to={routes.HOME}><FontAwesome name="film" /> My List</Link>
+  },
+  {
+    id: 2,
+    element: () => <Link to={routes.ACCOUNT}><FontAwesome name="user" /> My Account</Link>
+  },
+  {
+    id: 3,
+    element: () => <SignOutButton />
+  }
+];
+
 const NavigationAuth = () =>
-  <ul className="header-login header-logged">
-    <li><Link to={routes.HOME}>My List</Link></li>
-    <li><Link to={routes.ACCOUNT}>My Account</Link></li>
-    <li><SignOutButton /></li>
-  </ul>
+  <Dropdown
+    title="Account"
+    items={items}
+  />
 
 const NavigationNonAuth = () =>
   <NavUnlogged className="header-unlogged">
