@@ -3,7 +3,7 @@ import Link from 'gatsby-link';
 import styled from "styled-components";
 import FontAwesome from 'react-fontawesome';
 
-import Button from "../Button";
+import Button from "../_elements/Button";
 
 const MovieItem = (props) =>
   <Movie>

@@ -4,10 +4,10 @@ import Link from 'gatsby-link';
 import FontAwesome from 'react-fontawesome';
 import styled from "styled-components";
 
-import Button from '../Button';
+import Button from '../_elements/Button';
 import SignOutButton from '../SignOut';
 import * as routes from '../../constants/routes';
-import Dropdown from '../Dropdown';
+import Dropdown from '../_elements/Dropdown';
 
 const NavigationUser = (props, { authUser }) =>
   <nav>

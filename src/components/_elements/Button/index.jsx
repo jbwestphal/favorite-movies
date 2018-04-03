@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 
-import { red, green } from "../../utils/colors";
+import { red, green } from "../../../utils/colors";
 
 const Button = ({ children }) =>
   <StyledButton>

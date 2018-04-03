@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from "styled-components";
 
-import { redDark } from "../../utils/colors";
+import { redDark } from "../../../utils/colors";
 
 class Dropdown extends React.Component {
 

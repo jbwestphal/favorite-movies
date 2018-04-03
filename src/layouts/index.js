@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Search from '../components/Search';
+import Search from '../components/_elements/Search';
 import withAuthentication from '../components/Session/withAuthentication';
 
 import './index.css';

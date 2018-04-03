@@ -2,7 +2,7 @@ import React from 'react';
 import FontAwesome from 'react-fontawesome';
 import styled from "styled-components";
 
-import { red } from "../../utils/colors";
+import { red } from "../../../utils/colors";
 
 const Search = (props) =>
   <StyledSearch>

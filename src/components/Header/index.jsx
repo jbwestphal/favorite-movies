@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
 
-import ScrollPosition from '../ScrollPosition';
+import ScrollPosition from '../_hocs/ScrollPosition';
+import Search from '../_elements/Search';
 import Navigation from '../Navigation';
 import NavigationUser from '../NavigationUser';
-import Search from '../Search';
 import logo from './logo.png';
 import './header.css';
 
