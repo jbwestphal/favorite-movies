@@ -20,7 +20,7 @@ class Dropdown extends React.Component {
       <ListDropdown>
         {
           items.map(item => (
-            <ItemDropdown>
+            <ItemDropdown key={item.id}>
               {item.element()}
             </ItemDropdown>
           ))
@@ -31,9 +31,9 @@ class Dropdown extends React.Component {
   }
 }
 
-Dropdown.contextTypes = {
+Dropdown.propTypes = {
   title: PropTypes.string.isRequired,
-  item: PropTypes.array.isRequired,
+  items: PropTypes.array.isRequired,
 };
 
 // Styles
