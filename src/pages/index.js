@@ -22,6 +22,16 @@ class LandingPage extends React.Component {
           <MovieItem />
         </WrapperCatalog>
 
+        <TitleSection>Most Rated</TitleSection>
+        <WrapperCatalog>
+          <MovieItem />
+          <MovieItem />
+          <MovieItem />
+          <MovieItem />
+          <MovieItem />
+          <MovieItem />
+        </WrapperCatalog>
+
         {/* <ul>
           {data.allMoviesJson.edges.map(({ node }) =>
             <li key={node.id}>
@@ -58,6 +68,7 @@ const WrapperCatalog = styled.div`
   display: flex;
   align-items: stretch;
   justify-content: space-between;
+  margin: 0 0 60px;
 
   & article {
     width: 15%;

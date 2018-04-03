@@ -5,6 +5,14 @@ export const StyledForm = styled.section`
   height: 100%;
   overflow: hidden;
 
+  & p,
+  & label {
+    font-size: 16px;
+    display: block;
+    margin: 0 0 15px;
+    line-height: 1.3em;
+  }
+
   & input,
   & textarea {
     display: block;
