@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class ScrollPosition extends React.Component {
-  constructor() {
-    super( );
-    this.state = { position: 0 };
+
+  state = {
+    position: 0
   }
 
   componentDidMount() {
@@ -21,7 +21,7 @@ class ScrollPosition extends React.Component {
 }
 
 ScrollPosition.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.func.isRequired,
 }
 
 export default ScrollPosition

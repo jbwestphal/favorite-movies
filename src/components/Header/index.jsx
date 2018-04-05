@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 
-import ScrollPosition from '../_hocs/ScrollPosition';
+import ScrollPosition from '../_functions/ScrollPosition';
 import Search from '../_elements/Search';
 import Navigation from '../Navigation';
 import NavigationUser from '../NavigationUser';
