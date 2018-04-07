@@ -5,7 +5,7 @@ import FontAwesome from 'react-fontawesome';
 
 import { Wrapper } from "../utils/cssGrid";
 import Button from "../components/_elements/Button";
-import { redDark, red, yellow } from "../utils/colors";
+import { redDark, red, yellow, green } from "../utils/colors";
 
 export default ({ data }) => {
   const movie = data.moviesJson;
@@ -42,14 +42,14 @@ export default ({ data }) => {
           </MovieRateWrapper>
 
           <section>
-            <h3>Overview</h3>
-            <p>{movie.description}</p>
-            <div>
-              <p>Release Date: <br /> {movie.date}</p>
-              <p>Director: <br /> {movie.director}</p>
-              <p>Stars: <br /> {movie.stars}</p>
-              <p>Category: <br /> <span>{movie.category}</span></p>
-            </div>
+            <MovieTabTitle>Overview</MovieTabTitle>
+            <MovieDescription>{movie.description}</MovieDescription>
+            <MovieOtherInfo>
+              <p><strong>Stars:</strong> {movie.stars}</p>
+              <p><strong>Release Date:</strong> {movie.date}</p>
+              <p><strong>Director:</strong> {movie.director}</p>
+              <p><strong>Category:</strong> <span>{movie.category}</span></p>
+            </MovieOtherInfo>
           </section>
         </article>
       </WrapperDetail>
@@ -176,5 +176,41 @@ const MovieListStars = styled.ul`
     color: ${yellow};
     cursor: pointer;
     margin-right: 6px;
+  }
+`;
+
+const MovieTabTitle = styled.h3`
+  color: ${green};
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+  font-weight: 600;
+  padding-bottom: 8px;
+  display: inline-block;
+  border-bottom: 3px solid ${green};
+`;
+
+const MovieDescription = styled.p`
+  color: #fff;
+  font-size: 16px;
+  margin: 0 0 20px;
+  line-height: 1.5em;
+`;
+
+const MovieOtherInfo = styled.section`
+  display: flex;
+
+  & p {
+    font-size: 16px;
+    margin-right: 35px;
+    max-width: 160px;
+    line-height: 1.4em;
+  }
+
+  & strong {
+    font-weight: 600;
+    color: #fff;
+    display: block;
+    margin-bottom: 6px;
   }
 `;
