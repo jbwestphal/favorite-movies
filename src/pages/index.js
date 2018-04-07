@@ -53,7 +53,6 @@ export const LandingQuery = graphql`
 const WrapperCatalog = styled.div`
   display: flex;
   align-items: stretch;
-  justify-content: space-between;
   margin: 0 0 60px;
 
   & article {
