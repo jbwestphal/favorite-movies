@@ -5,17 +5,27 @@ import FontAwesome from 'react-fontawesome';
 
 import Button from "../_elements/Button";
 
-const MovieItem = (props) =>
-  <Movie>
-    <Link to="./movie">
-      <figure className="movie-img"><img src="https://image.ibb.co/mMOHh7/black_panter_cover.jpg" /></figure>
-      <section className="movie-info">
-        <h2 className="movie-title">Black Panther</h2>
-        <time dateTime="2018-02-15" className="movie-date">Released: 2018-02-15</time>
-        <Button><FontAwesome name="plus" /> Details</Button>
-      </section>
-    </Link>
-  </Movie>
+class MovieItem extends React.Component {
+
+  render() {
+    const { data } = this.props
+
+    console.log(data)
+
+    return(
+      <Movie>
+        <Link to={`/${data.page}`}>
+          <figure className="movie-img"><img src={data.cover} /></figure>
+          <section className="movie-info">
+            <h2 className="movie-title">{data.title}</h2>
+            <time dateTime="2018-02-15" className="movie-date">Released: {data.date}</time>
+            <Button><FontAwesome name="plus" /> Details</Button>
+          </section>
+        </Link>
+      </Movie>
+    )
+  }
+}
 
 export default MovieItem;
 

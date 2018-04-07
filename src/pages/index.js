@@ -14,33 +14,17 @@ class LandingPage extends React.Component {
 
         <TitleSection>Recent Added</TitleSection>
         <WrapperCatalog>
-          <MovieItem />
-          <MovieItem />
-          <MovieItem />
-          <MovieItem />
-          <MovieItem />
-          <MovieItem />
+        {data.allMoviesJson.edges.map(({ node }, index) =>
+          <MovieItem data={node} key={index} />
+        )}
         </WrapperCatalog>
 
         <TitleSection>Most Rated</TitleSection>
         <WrapperCatalog>
-          <MovieItem />
-          <MovieItem />
-          <MovieItem />
-          <MovieItem />
-          <MovieItem />
-          <MovieItem />
-        </WrapperCatalog>
-
-        {/* <ul>
-          {data.allMoviesJson.edges.map(({ node }) =>
-            <li key={node.id}>
-              <h4>{node.title}</h4>
-              <img src={node.cover} />
-              <p>{node.category}</p>
-            </li>
+          {data.allMoviesJson.edges.map(({ node }, index) =>
+            <MovieItem data={node} key={index} />
           )}
-        </ul> */}
+        </WrapperCatalog>
       </Wrapper>
     )
   }
@@ -57,6 +41,8 @@ export const LandingQuery = graphql`
           category
           cover
           title
+          date
+          page
         }
       }
     }
