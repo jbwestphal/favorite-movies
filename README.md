@@ -4,26 +4,30 @@ An application for track movies that you want to see or already saw.
 
 ## Features
   - Sign-in and Sign-up with Firebase
-  - Movies pages with description, comments and rate
-  - Interact with other users
-  - Edit / Delete movies from user account
+  - Movie page with description, whishlist and rate
+  - Interact with other users by comments
+  - Track movies from user account
   - Filter movies by categories
   - Tests with Jest and Enzyme
 
 ## Requirements
 
-- Install [Node.js](https://nodejs.org)
+- Install [Node.js](https://nodejs.org) * NPM (dependency management) will also be installed
+- Install [Yarn](https://yarnpkg.com/lang/en/docs/install/) if you don't want to use NPM
 - Install [Gatsby CLI](https://github.com/gatsbyjs/gatsby/)
 
 ## Run the project
 
-- ```npm install``` # or ```yarn install```
-- ```npm run develop``` # or ```gatsby develop```
+- Open your preferred Terminal
+- Install the dependencies using $ ```npm install``` or $ ```yarn install```
+- Start the project using $ ```gatsby develop```
 
 ## Additional Resources
 - ReactJs
+- Firebase
 - React Helmet
 - Prettier
+- Fontawesome
 - Styled Components
 
 ## Credits
