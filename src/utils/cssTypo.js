@@ -29,3 +29,9 @@ export const TitleSection = styled.h2`
     margin-left: 15px;
   }
 `;
+
+export const TextDescr = styled.p`
+  color: #fff;
+  margin: 0 0 15px;
+  font-size: 16px;
+`;
