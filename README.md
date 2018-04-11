@@ -19,6 +19,7 @@ An application for track movies that you want to see or already saw.
 ## Run the project
 
 - Open your preferred Terminal
+- $ ```cd to-the-project```
 - Install the dependencies using $ ```npm install``` or $ ```yarn install```
 - Start the project using $ ```gatsby develop```
 
@@ -27,7 +28,7 @@ An application for track movies that you want to see or already saw.
 - Firebase
 - React Helmet
 - Prettier
-- Fontawesome
+- Font Awesome
 - Styled Components
 
 ## Credits
