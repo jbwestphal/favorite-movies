@@ -4,32 +4,10 @@ import styled from "styled-components";
 import { TitleSection } from "../utils/cssTypo";
 import { Wrapper } from "../utils/cssGrid";
 import MovieItem from '../components/MovieItem';
-import withAuthorization from '../components/Session/withAuthorization';
-import { db } from '../firebase';
 
-const fromObjectToList = (object) =>
-  object
-    ? Object.keys(object).map(key => ({ ...object[key], index: key }))
-    : [];
-
-class HomePage extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      users: []
-    };
-  }
-
-  componentDidMount() {
-    db.onceGetUsers().then(snapshot =>
-      this.setState(() => ({ users: fromObjectToList(snapshot.val()) }))
-    );
-  }
-
+class Movies extends Component {
   render() {
     const { data } = this.props
-    const { users } = this.state;
 
     return (
       <Wrapper>
@@ -46,14 +24,13 @@ class HomePage extends Component {
             <MovieItem data={node} key={index} />
           )}
         </WrapperCatalog>
-        {/* { !!users.length && <UserList users={users} /> } */}
       </Wrapper>
     );
   }
 }
 
-export const HomeQuery = graphql`
-  query HomeQuery {
+export const MoviesQuerie = graphql`
+  query MoviesQuerie {
     allMoviesJson {
       edges {
         node {
@@ -67,16 +44,7 @@ export const HomeQuery = graphql`
       }
     }
   }
-`
-
-const UserList = ({ users }) =>
-  <div>
-    {users.map(user =>
-      <div key={user.index}>Olá {user.username}</div>
-    )}
-  </div>
-
-const authCondition = (authUser) => !!authUser;
+`;
 
 // Styles
 const WrapperCatalog = styled.div`
@@ -94,4 +62,4 @@ const WrapperCatalog = styled.div`
   }
 `;
 
-export default withAuthorization(authCondition)(HomePage);
+export default Movies;
