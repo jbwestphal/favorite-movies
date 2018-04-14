@@ -15,19 +15,13 @@ export default ({ data }) => {
   return (
     <Wrapper>
       <WrapperDetail>
-
         <MovieColLeft>
           <figure><img src={movie.cover} alt={movie.title} /></figure>
         </MovieColLeft>
-
         <article>
-
           <MovieTitle>{movie.title}</MovieTitle>
-
           <MovieListAction />
-
           <MovieRate />
-
           <section>
             <MovieTabTitle>Overview</MovieTabTitle>
             <MovieDescription>{movie.description}</MovieDescription>
@@ -81,6 +75,8 @@ const MovieColLeft = styled.section`
 
   & img {
     border-radius: 6px;
+    width: 260px;
+    max-width: initial;
   }
 
   & figure {

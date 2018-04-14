@@ -10,10 +10,10 @@ import { red, green } from "../../utils/colors";
 const Navigation = (props) =>
   <StyledNav>
     <NavList>
-      <NavListItem><Link to={routes.LANDING}>Home</Link></NavListItem>
-      <NavListItem><Link to={routes.MOVIES}>Movies</Link></NavListItem>
-      <NavListItem><Link to={routes.FAQ}>FAQ</Link></NavListItem>
-      <NavListItem><Link to={routes.CONTACT}>Contact</Link></NavListItem>
+      <NavListItem><Link activeClassName="active" exact="true" to={routes.LANDING}>Home</Link></NavListItem>
+      <NavListItem><Link activeClassName="active" to={routes.MOVIES}>Movies</Link></NavListItem>
+      <NavListItem><Link activeClassName="active" exact="true" to={routes.FAQ}>FAQ</Link></NavListItem>
+      <NavListItem><Link activeClassName="active" exact="true" to={routes.CONTACT}>Contact</Link></NavListItem>
     </NavList>
   </StyledNav>
 
@@ -57,12 +57,15 @@ const NavListItem = styled.li`
     }
   }
 
-  &:hover {
+  &:hover,
+  & .active {
     color: #fff;
-    a:before {
+    a:before,
+    &:before {
       width: 100%;
     }
   }
+
 `;
 
 export default Navigation;
