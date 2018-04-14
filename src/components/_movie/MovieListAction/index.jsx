@@ -17,7 +17,7 @@ class MovieListAction extends React.Component {
   render() {
     return (
       <StyledMovieAction>
-        <StyledMovieActionItem><button type="button" onClick={this.toggleWishlist}><FontAwesome name="film" /> Wishlist</button></StyledMovieActionItem>
+        <StyledMovieActionItem><button type="button" onClick={this.toggleWishlist}><FontAwesome name="film" /> Wanna Watch</button></StyledMovieActionItem>
         <StyledMovieActionItem><button type="button" onClick={this.toggleFavorite}><FontAwesome name="heart" /> Favorite</button></StyledMovieActionItem>
       </StyledMovieAction>
     )
