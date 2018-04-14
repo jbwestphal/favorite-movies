@@ -1,26 +1,33 @@
 import React from 'react';
-import styled from "styled-components";
+import styled from 'styled-components';
 import FontAwesome from 'react-fontawesome';
 
-import { red } from "../../../utils/colors";
+import { redLight } from '../../../utils/colors';
 
 class MovieListAction extends React.Component {
-
-  toggleWishlist = (e) => {
+  toggleWishlist = e => {
     e.preventDefault();
-  }
+  };
 
-  toggleFavorite = (e) => {
+  toggleFavorite = e => {
     e.preventDefault();
-  }
+  };
 
   render() {
     return (
       <StyledMovieAction>
-        <StyledMovieActionItem><button type="button" onClick={this.toggleWishlist}><FontAwesome name="film" /> Wanna Watch</button></StyledMovieActionItem>
-        <StyledMovieActionItem><button type="button" onClick={this.toggleFavorite}><FontAwesome name="heart" /> Favorite</button></StyledMovieActionItem>
+        <StyledMovieActionItem>
+          <button type="button" onClick={this.toggleWishlist}>
+            <FontAwesome name="film" /> Wanna Watch
+          </button>
+        </StyledMovieActionItem>
+        <StyledMovieActionItem>
+          <button type="button" onClick={this.toggleFavorite}>
+            <FontAwesome name="heart" /> Favorite
+          </button>
+        </StyledMovieActionItem>
       </StyledMovieAction>
-    )
+    );
   }
 }
 
@@ -41,7 +48,7 @@ const StyledMovieActionItem = styled.li`
     background: none;
     border: none;
     outline: none;
-    color: ${red};
+    color: ${redLight};
     text-transform: uppercase;
     font-size: 15px;
     font-weight: 600;
@@ -49,7 +56,7 @@ const StyledMovieActionItem = styled.li`
 
   & .fa {
     border-radius: 50%;
-    border: 1px solid ${red};
+    border: 1px solid ${redLight};
     width: 48px;
     height: 48px;
     display: inline-block;

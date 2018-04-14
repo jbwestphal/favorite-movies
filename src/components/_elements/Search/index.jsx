@@ -1,16 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react';
 import FontAwesome from 'react-fontawesome';
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { red } from "../../../utils/colors";
+import { red } from '../../../utils/colors';
 
-const Search = (props) =>
-  <StyledSearch>
-    <form className="form-search">
-      <input type="search" name="search" required placeholder="Search for a movie" />
-      <button type="submit"><FontAwesome name="search" /></button>
-    </form>
-  </StyledSearch>
+class Search extends Component {
+  handleSubmit = e => {
+    e.preventDefault();
+  };
+
+  render() {
+    return (
+      <StyledSearch>
+        <form className="form-search" onSubmit={this.handleSubmit}>
+          <input
+            type="search"
+            name="search"
+            required
+            placeholder="Search for a movie"
+          />
+          <button type="submit">
+            <FontAwesome name="search" />
+          </button>
+        </form>
+      </StyledSearch>
+    );
+  }
+}
 
 export default Search;
 

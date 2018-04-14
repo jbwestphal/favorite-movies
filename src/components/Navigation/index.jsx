@@ -1,24 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
-import styled from "styled-components";
+import styled from 'styled-components';
 
 import SignOutButton from '../SignOut';
-import * as routes from '../../constants/routes';
-import { red, green } from "../../utils/colors";
+import { navItems } from '../../constants/navItems';
+import { red, green } from '../../utils/colors';
 
-const Navigation = (props) =>
+const Navigation = props => (
   <StyledNav>
     <NavList>
-      <NavListItem><Link activeClassName="active" exact="true" to={routes.LANDING}>Home</Link></NavListItem>
-      <NavListItem><Link activeClassName="active" to={routes.MOVIES}>Movies</Link></NavListItem>
-      <NavListItem><Link activeClassName="active" exact="true" to={routes.FAQ}>FAQ</Link></NavListItem>
-      <NavListItem><Link activeClassName="active" exact="true" to={routes.CONTACT}>Contact</Link></NavListItem>
+      {navItems &&
+        navItems.map((item, index) => (
+          <NavListItem key={index}>
+            <Link activeClassName="active" exact={item.exact} to={item.path}>
+              {item.title}
+            </Link>
+          </NavListItem>
+        ))}
     </NavList>
   </StyledNav>
+);
 
 Navigation.contextTypes = {
-  authUser: PropTypes.object,
+  authUser: PropTypes.object
 };
 
 // Styles
@@ -53,7 +58,7 @@ const NavListItem = styled.li`
       position: absolute;
       background: ${green};
       transition: all ease-in-out 0.3s;
-      transform: translate(-50%,0);
+      transform: translate(-50%, 0);
     }
   }
 
@@ -65,7 +70,6 @@ const NavListItem = styled.li`
       width: 100%;
     }
   }
-
 `;
 
 export default Navigation;
