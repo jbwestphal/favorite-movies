@@ -1,32 +1,61 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import styled from "styled-components";
+import styled from 'styled-components';
 import FontAwesome from 'react-fontawesome';
 
-import Button from "../_elements/Button";
-import { red } from "../../utils/colors";
+import Button from '../_elements/Button';
+import { red } from '../../utils/colors';
 
 class MovieItem extends React.Component {
+  toggleWishlist = e => {
+    e.preventDefault();
+  };
+
+  toggleFavorite = e => {
+    e.preventDefault();
+  };
 
   render() {
-    const { data } = this.props
+    const { data } = this.props;
 
     return (
       <Movie>
         <Link to={`/${data.page}`}>
-          <figure className="movie-img"><img src={data.cover} /></figure>
+          <figure className="movie-img">
+            <img src={data.cover} />
+          </figure>
           <section className="movie-info">
             <h2 className="movie-title">{data.title}</h2>
-            <time dateTime="2018-02-15" className="movie-date">Released: {data.date}</time>
-            <Button><FontAwesome name="plus" /> Details</Button>
+            <time dateTime="2018-02-15" className="movie-date">
+              Released: {data.date}
+            </time>
+            <Button>
+              <FontAwesome name="plus" /> Details
+            </Button>
           </section>
-          <ul className="movie-action">
-            <li><button type="button" title="Wanna watch"><FontAwesome name="film" /></button></li>
-            <li><button type="button" title="Favorite"><FontAwesome name="heart" /></button></li>
-          </ul>
         </Link>
+        <ul className="movie-action">
+          <li>
+            <button
+              type="button"
+              title="Wanna watch"
+              onClick={this.toggleWishlist}
+            >
+              <FontAwesome name="film" />
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              title="Favorite"
+              onClick={this.toggleFavorite}
+            >
+              <FontAwesome name="heart" />
+            </button>
+          </li>
+        </ul>
       </Movie>
-    )
+    );
   }
 }
 
@@ -52,7 +81,11 @@ const Movie = styled.article`
       position: absolute;
       opacity: 0;
       transition: all ease-in-out 0.3s;
-      background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(0,0,0,1) 100%);
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 0, 0, 1) 100%
+      );
     }
   }
 
