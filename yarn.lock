@@ -5478,9 +5478,9 @@ nth-check@~1.0.1:
   dependencies:
     boolbase "~1.0.0"
 
-nuka-carousel@^4.0.3:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/nuka-carousel/-/nuka-carousel-4.0.3.tgz#e52753a25142a6250739fe3e17b57b8f57268f0c"
+nuka-carousel@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/nuka-carousel/-/nuka-carousel-4.1.0.tgz#e461377ff50006131db10fb5311997e4d9f8ddc2"
   dependencies:
     d3-ease "^1.0.3"
     exenv "^1.2.0"

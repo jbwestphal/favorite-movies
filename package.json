@@ -11,19 +11,21 @@
     "gatsby-plugin-styled-components": "^2.0.11",
     "gatsby-source-filesystem": "^1.5.27",
     "gatsby-transformer-json": "^1.0.16",
-    "nuka-carousel": "^4.0.3",
+    "nuka-carousel": "^4.1.0",
     "prop-types": "^15.6.0",
-    "react-fontawesome": "^1.6.1",
-    "styled-components": "^3.2.3",
     "react": "^16.3.1",
-    "react-dom": "^16.3.1",
     "react-disqus-comments": "^1.1.1",
+    "react-dom": "^16.3.1",
+    "react-fontawesome": "^1.6.1",
     "react-helmet": "^5.2.0",
     "react-share": "^2.0.0",
-    "react-twitter-widgets": "^1.7.1"
+    "react-twitter-widgets": "^1.7.1",
+    "styled-components": "^3.2.3"
   },
   "keywords": [
-    "gatsby", "firebase", "react-helmet"
+    "gatsby",
+    "firebase",
+    "react-helmet"
   ],
   "license": "MIT",
   "main": "n/a",
