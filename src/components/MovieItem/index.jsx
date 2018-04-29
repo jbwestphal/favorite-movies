@@ -5,6 +5,7 @@ import FontAwesome from 'react-fontawesome';
 
 import Button from '../_elements/Button';
 import { red } from '../../utils/colors';
+import { urlImg } from '../../firebase/firebase';
 
 class MovieItem extends React.Component {
   toggleWishlist = e => {
@@ -20,14 +21,14 @@ class MovieItem extends React.Component {
 
     return (
       <Movie>
-        <Link to={`/${data.page}`}>
+        <Link to={`/${data.id}`}>
           <figure className="movie-img">
-            <img src={data.cover} />
+            <img src={urlImg + data.poster_path} />
           </figure>
           <section className="movie-info">
             <h2 className="movie-title">{data.title}</h2>
             <time dateTime="2018-02-15" className="movie-date">
-              Released: {data.date}
+              Release: {data.release_date}
             </time>
             <Button>
               <FontAwesome name="plus" /> Details
